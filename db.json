@@ -1,0 +1,60 @@
+{
+  "admins": [
+    {
+      "name": "habeeb",
+      "email": "habeeb@gmail.com",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "id": 2
+    },
+    {
+      "name": "Admin User",
+      "email": "test@user.com",
+      "password": "1234567",
+      "id": 3
+    }
+  ],
+  "animals": [
+    {
+      "name": "Lion",
+      "scientificName": "Panthera leo",
+      "species": "Cat",
+      "group": "Mammal",
+      "sex": "Male",
+      "image": "https://i.pinimg.com/originals/c0/d6/25/c0d625a7ef5bc800380b76186f4f1e06.jpg",
+      "id": 1
+    },
+    {
+      "name": "Tiger",
+      "scientificName": "Panthera tigris",
+      "species": "Cat",
+      "group": "Mammal",
+      "sex": "Male",
+      "image": "https://wallpaperplay.com/walls/full/1/e/8/329821.jpg",
+      "id": 2
+    },
+    {
+      "name": "Leopard",
+      "scientificName": "Panthera pardus",
+      "species": "Cat",
+      "group": "Mammal",
+      "sex": "Male",
+      "image": "http://animalsbirds.com/wp-content/uploads/2016/08/Cool-Leopard-HD-Wallpapers.jpg",
+      "id": 3
+    },
+    {
+      "name": "Hyena",
+      "scientificName": "Hyaenidae",
+      "species": "Dog",
+      "group": "Mammal",
+      "sex": "Male",
+      "image": "https://www.nairaland.com/attachments/3638587_img80131280x853_jpegb4e5ff0d2e8242007983526fb116610b",
+      "id": 4
+    }
+  ]
+}

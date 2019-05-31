@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Welcome to Decazoo</title> 
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jQuery/jquery-3.4.1.js"></script>        
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <a class="navbar-brand" href="#">DecaZoo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New animal</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" id="text" placeholder="Search for an animal">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit">Search</button>
+                </form>
+            </div>
+            </nav>
+    </header>  
+    
+    <main class="m-0" id="main" style="background-image: url(); background-repeat: no-repeat;">
+
+        <div id="one" class="text-center">
+          <div class="card" style="width: 18rem;">
+              <img src="" class="card-img-top" alt="No image" id="img" width="200">
+              <div class="card-body">
+                The
+                <h5 class="card-title" id="atittle"></h5> <p>has its scientific name as:</p>
+                <p class="card-text" id="sciname"></p> <p>falls within the group of</p>
+                <p class="card-text" id="group"></p>
+              </div>
+            </div>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="text-center m-5"> Welcome to Decagon Zoo</h1>
+        <img  src="../../images/photo-1534567153574-2b12153a87f0.jpeg" alt="" width="100%">
+      </div>
+
+        <div class="d-flex justify-content-around" id="structured">
+            
+        </div>
+      
+
+    </main>
+    
+    <script src="../../js/addAdmin.js">
+        $(function() {
+            $("#one").hide()
+                 $.ajax({
+                     method: 'GET',
+                     url: 'http://localhost:3000/animals',
+                     dataType: 'json',
+                 }).done(function(data){
+                     $.map(data, function(post, i){
+                         $("#structured").append(`
+                         <div class="card border border-primary rounded text-center each" style="width: 18rem;" id=${post.id}>
+                         <img class="card-img-top" src=${post.image} alt="Card image cap" height="200">
+                         <div class="card-body">
+                           <h5 class="card-title">${post.scientificName}</h5>
+                           <p class="card-text">A ${post.sex} ${post.name}.</p>
+                           <p class="card-text">Groups: ${post.group}.</p>
+                           <p class="card-text">Among the wildest: ${post.species}.</p>
+                         </div>
+                       </div>`)
+                     })
+                 })
+         })    
+    </script>
+</body>
+</html>

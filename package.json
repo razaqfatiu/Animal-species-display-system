@@ -1,0 +1,22 @@
+{
+  "name": "animal-species-display-system",
+  "version": "1.0.0",
+  "description": "An app that keeps track of animals in a zoo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razaqfatiu/Animal-species-display-system.git"
+  },
+  "author": "Isiaka Fatiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razaqfatiu/Animal-species-display-system/issues"
+  },
+  "homepage": "https://github.com/razaqfatiu/Animal-species-display-system#readme",
+  "dependencies": {
+    "json-server": "^0.15.0"
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Add</title> 
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/jQuery/jquery-3.4.1.js"></script>    
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <a class="navbar-brand" href="#">DecaZoo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New animal</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for an animal">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+            </nav>
+    </header>    
+
+    <main>
+        <form method="POST" action="localhost:3000/animals" class="m-5 pb-5 bg-secondary">
+            <!-- <div class=" row h-100 justify-content-center align-items-center"> -->
+            <div class="w-50 p-3 ">
+            <div class="form-group">
+              <label for="name">Common Name</label>
+              <input type="text" class="form-control" id="name"  placeholder="Common Name of the animal">
+            </div>
+            <div class="form-group">
+                <label for="sciName">Scientific Name</label>
+                <input type="text" class="form-control" id="sciName"  placeholder="Scientific Name">
+              </div> 
+            <div class="form-group">
+                <label for="species">Species</label>
+                <input type="text" class="form-control" id="species"  placeholder="">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="group">Group</label>
+                <select id="group" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Mammal</option>
+                  <option>Amphibian</option>
+                  <option>Bird</option>
+                  <option>Reptile</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="group">Sex</label>
+                <select id="sex" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="image">Image Url</label>
+                <input type="url" class="form-control" id="image"  placeholder="Image Url">
+            </div>
+            </div>
+            
+            
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- </div> -->
+          </form>
+    </main>
+    <script src="../../js/newAnimal.js"></script>
+</body>
+</html>
