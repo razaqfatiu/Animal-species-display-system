@@ -35,8 +35,8 @@
     
     <main class="m-0" id="main" style="background-image: url(); background-repeat: no-repeat;">
 
-        <div id="one" class="text-center">
-          <div class="card" style="width: 18rem;">
+        <div id="two" class="text-center">
+          <div class="card" id="three" style="width: 18rem;">
               <img src="" class="card-img-top" alt="No image" id="img" width="200">
               <div class="card-body">
                 The
@@ -45,7 +45,7 @@
                 <p class="card-text" id="group"></p>
               </div>
             </div>
-      </div>
+     </div>
 
       <div class="jumbotron">
         <h1 class="text-center m-5"> Welcome to Decagon Zoo</h1>
@@ -59,28 +59,6 @@
 
     </main>
     
-    <script src="../../js/addAdmin.js">
-        $(function() {
-            $("#one").hide()
-                 $.ajax({
-                     method: 'GET',
-                     url: 'http://localhost:3000/animals',
-                     dataType: 'json',
-                 }).done(function(data){
-                     $.map(data, function(post, i){
-                         $("#structured").append(`
-                         <div class="card border border-primary rounded text-center each" style="width: 18rem;" id=${post.id}>
-                         <img class="card-img-top" src=${post.image} alt="Card image cap" height="200">
-                         <div class="card-body">
-                           <h5 class="card-title">${post.scientificName}</h5>
-                           <p class="card-text">A ${post.sex} ${post.name}.</p>
-                           <p class="card-text">Groups: ${post.group}.</p>
-                           <p class="card-text">Among the wildest: ${post.species}.</p>
-                         </div>
-                       </div>`)
-                     })
-                 })
-         })    
-    </script>
+    <script src="../../js/adminIndex.js"> </script>
 </body>
 </html>
